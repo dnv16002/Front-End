@@ -10,14 +10,14 @@ constructor(props) {
   }
 }
 
-API_URL="http://localhost:5038/";
+API_URL="https://clear-gold-panda.cyclic.app/";
 
 componentDidMount(){
   this.refreshNotes();
 }
 
 async refreshNotes(){
-  fetch(this.API_URL+"api/todoapp/GeclstNotes").then(response=>response.json())
+  fetch(this.API_URL+"api/todoapp/GetNotes").then(response=>response.json())
   .then(data=>{
     this.setState({notes: data});
   })
